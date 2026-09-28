@@ -2,13 +2,13 @@
 
 [![Fold2Reason diagram showing FoldingCorpus construction, general reasoning transfer, and the model architecture](assets/Fold2Reason.png)](assets/Fold2Reason.pdf)
 
-Protein-structure post-training for language models. Fold2Reason combines **FoldingCorpus** supervision with a shared spatial workspace and a frozen geometry decoder. General reasoning is evaluated with the adapted language model; structural readout uses the workspace and decoder.
+Protein-structure post-training for language models. **Fold2Reason** combines **FoldingCorpus** supervision with a shared spatial workspace and a frozen geometry decoder. General reasoning is evaluated with the adapted language model; structural readout uses the workspace and decoder.
 
 This repository contains the Qwen3.5 training and evaluation pipeline, a FoldingCorpus-only Pure-LoRA baseline, deterministic data preparation, and General-10 score aggregation.
 
 [![Fold2Reason results: LM-Folding performance and gains over the base model across general reasoning benchmarks](assets/figure1.png)](assets/figure1.pdf)
 
-The figure shows LM-Folding performance and per-benchmark gains over the base model. Click it to view the original PDF.
+The figure shows LM-Folding performance and per-benchmark gains over the base model.
 
 Start here: [install](#install) → [connect `dataset.zip`](#project-bundle-datasetzip) → [download the base model and external benchmarks](#models-and-evaluation-data) → [evaluate released checkpoints](#evaluate-the-released-checkpoints-no-training) or [retrain](#train).
 
