@@ -6,6 +6,12 @@ This repository contains the Qwen3.5 training and evaluation pipeline, a Folding
 
 Start here: [install](#install) → [connect `dataset.zip`](#project-bundle-datasetzip) → [download the base model and external benchmarks](#models-and-evaluation-data) → [evaluate released checkpoints](#evaluate-the-released-checkpoints-no-training) or [retrain](#train).
 
+## Model architecture
+
+[![Fold2Reason diagram showing FoldingCorpus construction, general reasoning transfer, and the model architecture](assets/Fold2Reason.png)](assets/Fold2Reason.pdf)
+
+Click the figure to view the original PDF.
+
 ## Install
 
 Use Python 3.12 and a CUDA-compatible PyTorch installation. The tested environment uses PyTorch 2.10.0. Transformers and PEFT are pinned to the source revisions recorded in this repository; see [installation](docs/installation.md).
