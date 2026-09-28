@@ -1,0 +1,6 @@
+description = "Full FTB-Core paired base/adapter evaluation"
+
+[arguments]
+batch_size = 8
+max_new_tokens = 32
+

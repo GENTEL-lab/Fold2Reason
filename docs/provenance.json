@@ -1,0 +1,161 @@
+{
+  "migration_date": "2026-09-14",
+  "source_repository": "folding-post-training (local working tree snapshot, including pre-existing uncommitted research updates)",
+  "package": "fold2reason",
+  "scope": "Qwen3.5 core data, training, structural readout, and General-10 evaluation",
+  "changes": [
+    "Reorganized modules by responsibility; rewrote internal imports to absolute fold2reason package imports.",
+    "Removed sys.path injection and machine-specific paths; defaults resolve from the working directory.",
+    "Updated display terminology to FoldingCorpus while preserving serialized tensor/checkpoint keys and training algorithms.",
+    "Restricted the public text benchmark suite to seven General-10 text datasets; the other three use FTB and spatial evaluators.",
+    "Changed text evaluation's per-dataset default cap from 1000 to 0 (full dataset).",
+    "Added a lightweight CLI, TOML recipes, normalized three-seed aggregation, synthetic examples, docs, and CPU tests."
+  ],
+  "excluded": [
+    "Credentials and shell profiles",
+    "Private cluster launchers and machine-specific orchestration",
+    "Model weights, training/benchmark datasets, caches, and experiment outputs",
+    "Manuscript archives, proprietary fonts, and API experiment scripts",
+    "Exploratory and model-specific experiment drivers outside the documented Qwen core"
+  ],
+  "files": [
+    {
+      "source": "training_v2/analyze_ftb_paired.py",
+      "target": "src/fold2reason/analysis/paired.py",
+      "source_sha256": "c6aa0c457582d780b9458840a214c98d3c6e99eaac4d1cd5004cc9317e4e5a84",
+      "target_sha256": "c6aa0c457582d780b9458840a214c98d3c6e99eaac4d1cd5004cc9317e4e5a84"
+    },
+    {
+      "source": "training/evaluate_ftb_core.py",
+      "target": "src/fold2reason/evaluation/ftb.py",
+      "source_sha256": "2409f389c337fef92c5a027e474e90f1b566cf7de693b5e48160e606dcaa7491",
+      "target_sha256": "0ec725884929e4c0b6f488e90168aa7ce13157b9b544c0cfb9658b7c9cec52b5"
+    },
+    {
+      "source": "training_v2/evaluate_pass_at_k_text.py",
+      "target": "src/fold2reason/evaluation/sampling.py",
+      "source_sha256": "ed326a4815cffd44b9cdf046dd964dc17147356421deb11ca73bbe1d981449dc",
+      "target_sha256": "9efdc969816918d50d33afe2004a3a98ffd7ef8fd26b48a1c1e6581ea4c45c9b"
+    },
+    {
+      "source": "training_v2/evaluate_general_benchs_all.py",
+      "target": "src/fold2reason/evaluation/general_text.py",
+      "source_sha256": "fa3ef7c40fc734bfb36658d415920ef5ac96c1d3601b35511049e582c47df1e8",
+      "target_sha256": "630b7e78982576d1688ddc204c1f76de6fd16204461584c9eb2bb8989906f8df"
+    },
+    {
+      "source": "training_v2/evaluate_workspace_foldbench.py",
+      "target": "src/fold2reason/evaluation/foldbench.py",
+      "source_sha256": "c2e3fb547267315670c6e47577f02332708d91ed9f33e3c7f7a6b3c1618b3f4c",
+      "target_sha256": "16c5dd75316ed49af361719897fcf917ebd77d60cf9f0169f87789907b7d8885"
+    },
+    {
+      "source": "training_v2/evaluate_geometry.py",
+      "target": "src/fold2reason/evaluation/geometry.py",
+      "source_sha256": "e9eba1191893faf0e16d88e49cf9c209c36487814da41e9a658b3bba12418d7e",
+      "target_sha256": "3f111d6d02d84cacc2b6818815ed3ffe83544fef9abefe1330d5943d7656b1c9"
+    },
+    {
+      "source": "training_v2/evaluate_pure_lora_relation.py",
+      "target": "src/fold2reason/evaluation/folding_corpus.py",
+      "source_sha256": "9495dff095ff509af75b4dec61afcf3f11619e5656b0ddd67ba16dbad84ee258",
+      "target_sha256": "fabd16435d5de8ef443f005f94049388265ba383393ae6be22cfb198e1c4f6c0"
+    },
+    {
+      "source": "training_v2/export_backbone.py",
+      "target": "src/fold2reason/data/backbone.py",
+      "source_sha256": "b6e437751a045d4b819fdfcc53a0b5d9131a6f898a3b59fb3d9c41c48c53ba24",
+      "target_sha256": "ffa3b16188e4d22e1a7486df69729958e9c5f34dbf29edd54f06aebdf5c0f9ee"
+    },
+    {
+      "source": "training_v2/evaluate_multimodal_spatial_benchs.py",
+      "target": "src/fold2reason/evaluation/spatial.py",
+      "source_sha256": "a33b20cfa569124b65cdbbd51aa0847761298d40bbe15a07da5b799c0a0ed653",
+      "target_sha256": "faade7c0920ed718199aaeeeebcb6960cc1092560ac39207e86e4bfde16c25a1"
+    },
+    {
+      "source": "training_v2/geometry_model.py",
+      "target": "src/fold2reason/models/geometry.py",
+      "source_sha256": "cbf5c86a0d1b40c4da1baeb8d30d168715228272265d1a4f9516909d4800ba60",
+      "target_sha256": "cbf5c86a0d1b40c4da1baeb8d30d168715228272265d1a4f9516909d4800ba60"
+    },
+    {
+      "source": "training_v2/model_level_model_loading.py",
+      "target": "src/fold2reason/models/backbones.py",
+      "source_sha256": "d447356a8720b9dfc69e6263809ba52109669486f9bdcbb85660a5d7670a6809",
+      "target_sha256": "d447356a8720b9dfc69e6263809ba52109669486f9bdcbb85660a5d7670a6809"
+    },
+    {
+      "source": "training_v2/multimodal_bench_common.py",
+      "target": "src/fold2reason/evaluation/multimodal.py",
+      "source_sha256": "536425064a8cd37e029bea53f2bda92916c55d8976d944cd431109e84e77a385",
+      "target_sha256": "536425064a8cd37e029bea53f2bda92916c55d8976d944cd431109e84e77a385"
+    },
+    {
+      "source": "training_v2/losses.py",
+      "target": "src/fold2reason/losses/geometry.py",
+      "source_sha256": "786f2f07b54555d10f823711477312d9fdf38ef377933f8de0cc168c603ff5f2",
+      "target_sha256": "786f2f07b54555d10f823711477312d9fdf38ef377933f8de0cc168c603ff5f2"
+    },
+    {
+      "source": "training_v2/spatial_workspace_model.py",
+      "target": "src/fold2reason/models/workspace.py",
+      "source_sha256": "6b22bb26676a610b7272d9f632b3ae25daec481809103f71211c9ca1dfd4bca8",
+      "target_sha256": "27fe77c3cc32bef2382dc32d0d4d521ec568970f9a1abe849eed678670986fa2"
+    },
+    {
+      "source": "training_v2/m3_gt_v2_partial_ft.py",
+      "target": "src/fold2reason/models/partial_adapter.py",
+      "source_sha256": "44ac1fda6f6d552013dda14b1ec87ac0608dbc7d03fa41be6d2ffdddcd73a39d",
+      "target_sha256": "44ac1fda6f6d552013dda14b1ec87ac0608dbc7d03fa41be6d2ffdddcd73a39d"
+    },
+    {
+      "source": "training_v2/prepare_geometry_cache.py",
+      "target": "src/fold2reason/data/geometry_cache.py",
+      "source_sha256": "ef56acf1fb49fbeebe1378b8ee6359817f6b11380abc04d2b2bf90626bcad8a2",
+      "target_sha256": "4a30da81b49967298c793c4a934bb925146858913f02e4ffd031c193f650199f"
+    },
+    {
+      "source": "training_v2/train_geometry_lora.py",
+      "target": "src/fold2reason/training/geometry.py",
+      "source_sha256": "c0abf006c7875a716fac25195c5ad362ed29f8a45e3cdb22c3bf0c836e317232",
+      "target_sha256": "22eb22a1ab97556df537aebb9dad93a421d478820e00a1c75f65bd633553c9ea"
+    },
+    {
+      "source": "training_v2/prepare_foldbench_geometry_cache.py",
+      "target": "src/fold2reason/data/foldbench_cache.py",
+      "source_sha256": "cfdc4267180500d057409d7f8f6a79cf5901d32b03f5c79dbd850cd886148d8d",
+      "target_sha256": "9cfc5edc7f0972885f2b863b02b58d690e8121b73628af8c734020122be7b438"
+    },
+    {
+      "source": "training_v2/train_pure_lora_relation_ce.py",
+      "target": "src/fold2reason/training/pure_lora.py",
+      "source_sha256": "5ec1aa5036379af2e7d9cf12f423f254942748d106a31391b3dd9411ef9f345b",
+      "target_sha256": "bf71fb081d2e71b10d250d601d29571c692bcc9987cc85fffa2972e120f1b4b4"
+    },
+    {
+      "source": "training_v2/build_multimodal_visual_cache.py",
+      "target": "src/fold2reason/data/visual_cache.py",
+      "source_sha256": "115e77090cead9ac8c89ed31b58b41457d167b02e2db850108a2d14534133406",
+      "target_sha256": "611310fa6934374d16b3060b4efa6fb494ca5c97a3dac98948c62d1b4a2b9ba8"
+    },
+    {
+      "source": "training_v2/train_spatial_workspace.py",
+      "target": "src/fold2reason/training/workspace.py",
+      "source_sha256": "c8a087c2317216048c66136212479b799b455a1c8f4b2c82c7256eee2ee23730",
+      "target_sha256": "50c74a306206648ba84b6f8562232189224f4311ea9ea54282017fa7d6bae0c8"
+    },
+    {
+      "source": "training_v2/prepare_spatial_bridge_data.py",
+      "target": "src/fold2reason/data/folding_corpus.py",
+      "source_sha256": "d26de4b3f6ffa731a3a03e8517d367ffb0147e60e5c8460fbe6a8fe034e720fb",
+      "target_sha256": "bc994ae5a8aa267b058b7b92b3b94928af0cf04887eaabc516b11fa5269a3fbd"
+    },
+    {
+      "source": "training_v2/prepare_phase2_workspace_cache.py",
+      "target": "src/fold2reason/data/workspace_cache.py",
+      "source_sha256": "26bd653642e958a740fc6e6be1a5474f9d2cd4f4d65cae61e7dfd4eb0487dac6",
+      "target_sha256": "be47f778d6369afc9a6ad6d86c304cfa6dec5cf424df1fc075bc596c9ab4c881"
+    }
+  ]
+}

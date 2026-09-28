@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fold2reason"
+version = "0.1.0"
+description = "Protein-structure post-training with FoldingCorpus and a shared spatial workspace"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "huggingface_hub>=1,<2",
+  "torch>=2.8,<2.11",
+  "transformers @ git+https://github.com/huggingface/transformers.git@dff4572dfa4bfa9f00cc8414e4b84877552fefe9",
+  "peft @ git+https://github.com/huggingface/peft.git@3116c96b5d870851e8477eb99dfcf8471bac0e72",
+  "accelerate>=1.10,<2",
+  "numpy>=2.2,<3",
+  "safetensors>=0.5,<1",
+  "pyarrow>=21,<26",
+  "einops>=0.8,<1",
+  "Pillow>=11,<13",
+  "tqdm>=4.67,<5",
+]
+
+[project.optional-dependencies]
+vision = ["torchvision>=0.23,<0.26", "av>=14,<19"]
+plots = ["matplotlib>=3.10,<4"]
+dev = ["pytest>=8,<10", "build>=1.2,<2"]
+
+[project.scripts]
+fold2reason = "fold2reason.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

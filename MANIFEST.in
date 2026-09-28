@@ -1,0 +1,7 @@
+include README.md CONTRIBUTING.md THIRD_PARTY_NOTICES.md
+recursive-include configs *.toml *.json
+recursive-include docs *.md *.json
+recursive-include examples *.json
+recursive-include tests *.py
+recursive-include tools *.py
+global-exclude __pycache__ *.py[cod]

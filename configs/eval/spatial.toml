@@ -1,0 +1,9 @@
+description = "Full SpatialViz and VSI with real image/video features"
+
+[arguments]
+benchmarks = ["spatialviz", "vsi"]
+spatialviz_batch_size = 2
+vsi_batch_size = 2
+spatialviz_max_new_tokens = 128
+vsi_max_new_tokens = 16
+

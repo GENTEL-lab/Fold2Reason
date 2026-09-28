@@ -1,0 +1,153 @@
+{
+  "verified_on": "2026-09-14",
+  "resources": {
+    "model": {
+      "repo_id": "Qwen/Qwen3.5-9B",
+      "repo_type": "model",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "destination": "models/Qwen3.5-9B",
+      "allow_patterns": [
+        "*.json",
+        "*.safetensors",
+        "*.jinja",
+        "*.txt",
+        "*.tiktoken",
+        "README.md",
+        "LICENSE*"
+      ],
+      "extract_zip": []
+    },
+    "spatialviz_bench": {
+      "repo_id": "Anonymous285714/SpatialViz-Bench",
+      "repo_type": "dataset",
+      "revision": "f38482a83f8f29e3cf9e07cb131d4de0f2cbd2f0",
+      "url": "https://huggingface.co/datasets/Anonymous285714/SpatialViz-Bench",
+      "destination": "data/benchmarks/data/external/spatialviz_bench",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "data/test-*.parquet",
+        "SpatialViz_Bench_images.zip"
+      ],
+      "extract_zip": [
+        "SpatialViz_Bench_images.zip"
+      ],
+      "extract_destinations": {
+        "SpatialViz_Bench_images.zip": "SpatialViz_Bench_images"
+      }
+    },
+    "vsi_bench": {
+      "repo_id": "nyu-visionx/VSI-Bench",
+      "repo_type": "dataset",
+      "revision": "d7cb1a3960b79dd3e20d4990b83005e96e1bcd9d",
+      "url": "https://huggingface.co/datasets/nyu-visionx/VSI-Bench",
+      "destination": "data/benchmarks/data/external/vsi_bench",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "test.jsonl",
+        "test_debiased.parquet",
+        "arkitscenes.zip",
+        "scannet.zip",
+        "scannetpp.zip"
+      ],
+      "extract_zip": [
+        "arkitscenes.zip",
+        "scannet.zip",
+        "scannetpp.zip"
+      ]
+    },
+    "graphqa_easy": {
+      "repo_id": "tonysun9/GraphQA_Easy",
+      "repo_type": "dataset",
+      "revision": "18f55c29d23f0847713cfd729cf2af9c33909446",
+      "url": "https://huggingface.co/datasets/tonysun9/GraphQA_Easy",
+      "destination": "data/benchmarks/data/external/graphqa_easy",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "data/test-*.parquet"
+      ],
+      "extract_zip": []
+    },
+    "graphqa_hard": {
+      "repo_id": "tonysun9/GraphQA_Hard",
+      "repo_type": "dataset",
+      "revision": "b7e910dda4c04398534cf0eab3e5f2bca6bec5cf",
+      "url": "https://huggingface.co/datasets/tonysun9/GraphQA_Hard",
+      "destination": "data/benchmarks/data/external/graphqa_hard",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "data/test-*.parquet"
+      ],
+      "extract_zip": []
+    },
+    "bbh": {
+      "repo_id": "lukaemon/bbh",
+      "repo_type": "dataset",
+      "revision": "982bb89fd79532a8ac676a61fc42eb1aeec63f99",
+      "url": "https://huggingface.co/datasets/lukaemon/bbh",
+      "destination": "data/benchmarks/data/external/bbh",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "*/test-*.parquet"
+      ],
+      "extract_zip": []
+    },
+    "chembench": {
+      "repo_id": "jablonkagroup/ChemBench",
+      "repo_type": "dataset",
+      "revision": "6e1d25748952393f44e35b8e85bbe567246a6430",
+      "url": "https://huggingface.co/datasets/jablonkagroup/ChemBench",
+      "destination": "data/benchmarks/data/external/chembench",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "*/train-*.parquet"
+      ],
+      "extract_zip": []
+    },
+    "chembench4k": {
+      "repo_id": "AI4Chem/ChemBench4K",
+      "repo_type": "dataset",
+      "revision": "9b8fec19c993c270868e4b8ec1eb580e501bcb22",
+      "url": "https://huggingface.co/datasets/AI4Chem/ChemBench4K",
+      "destination": "data/benchmarks/data/external/chembench4k",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "test/*_benchmark.json"
+      ],
+      "extract_zip": []
+    },
+    "lab_bench": {
+      "repo_id": "futurehouse/lab-bench",
+      "repo_type": "dataset",
+      "revision": "5c77cec648430f30611808808861eb86f81d5eaa",
+      "url": "https://huggingface.co/datasets/futurehouse/lab-bench",
+      "destination": "data/benchmarks/data/external/lab_bench",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "*/train-*.parquet"
+      ],
+      "extract_zip": []
+    },
+    "scibench": {
+      "repo_id": "xw27/scibench",
+      "repo_type": "dataset",
+      "revision": "93931252bc1b71d495e67390235940643d926958",
+      "url": "https://huggingface.co/datasets/xw27/scibench",
+      "destination": "data/benchmarks/data/external/scibench",
+      "allow_patterns": [
+        "README.md",
+        "LICENSE*",
+        "*.json"
+      ],
+      "extract_zip": []
+    }
+  }
+}

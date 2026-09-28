@@ -1,0 +1,11 @@
+description = "Train geometry heads on frozen base features before full post-training"
+
+[arguments]
+freeze_language_model = true
+epochs = 3
+seed = 20260729
+gradient_accumulation = 2
+head_learning_rate = 0.001
+distogram_learning_rate = 0.001
+loss_relation = 0.0
+

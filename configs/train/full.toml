@@ -1,0 +1,25 @@
+description = "Full Fold2Reason: three epochs, FoldingCorpus CE plus geometry, retrieval disabled"
+
+[arguments]
+arm = "m3_no_retrieval"
+epochs = 3
+seed = 20260729
+gradient_accumulation = 2
+lora_learning_rate = 0.0001
+workspace_learning_rate = 0.0003
+weight_decay = 0.01
+warmup_ratio = 0.05
+max_grad_norm = 1.0
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05
+workspace_width = 256
+memory_tokens = 16
+max_sparse_pairs = 2048
+loss_retrieval = 0.0
+loss_foldingcorpus = 1.0
+loss_geometry = 1.0
+eval_every_epochs = 0
+skip_final_evaluation = true
+checkpoint_every = 50
+

@@ -1,0 +1,7 @@
+description = "Seven text benchmarks; add FTB-Core, SpatialViz, and VSI to complete General-10"
+
+[arguments]
+datasets = ["bbh", "chembench", "chembench4k", "graphqa_easy", "graphqa_hard", "lab_bench", "scibench"]
+batch_size = 4
+max_new_tokens = 128
+max_examples_per_dataset = 0

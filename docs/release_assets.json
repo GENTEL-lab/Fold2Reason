@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "created_on": "2026-09-14",
+  "status": "prepared-locally-awaiting-owner-upload-and-license-confirmation",
+  "archives": [
+    {
+      "filename": "fold2reason-training-core-v1.tar.gz",
+      "purpose": "Main 1000/100/100 protein caches, BB4Q10 inputs and FoldingCorpus records",
+      "priority": "required-for-training",
+      "bytes": 153937324,
+      "sha256": "c29f1e4e6e57cc5d795cdc6bac6256f50d8b6583ef64bc78e04e16cd7dfc64d9",
+      "url": null,
+      "file_count": 17
+    },
+    {
+      "filename": "fold2reason-foldbench334-v1.tar.gz",
+      "purpose": "Exact processed 334-protein evaluation cache and target inputs",
+      "priority": "required-for-structural-evaluation",
+      "bytes": 62320292,
+      "sha256": "992cd6372cac3c0f42ff85278f28f9f58030e2186ed40902c3e565e5605a36c1",
+      "url": null,
+      "file_count": 7
+    },
+    {
+      "filename": "fold2reason-ftb-core-v1.tar.gz",
+      "purpose": "Project-generated FTB-Core v1, including fixed test and test_ood splits",
+      "priority": "required-for-general10",
+      "bytes": 9065067,
+      "sha256": "a8c72240e4730e8e0edecf2be2253ec70b7bf82b75973366282eb4bce62498fc",
+      "url": null,
+      "file_count": 9
+    },
+    {
+      "filename": "fold2reason-scaling-seed-20260729-v1.tar.gz",
+      "purpose": "All seven fixed-epoch data sizes (50 to 4000), seed 20260729",
+      "priority": "optional-for-scaling",
+      "bytes": 596997829,
+      "sha256": "d50088cadcd0b79a2cc7063b8cba03f1dc26e68b2bafb9de61d8cbba4bc183f5",
+      "url": null,
+      "file_count": 11
+    },
+    {
+      "filename": "fold2reason-scaling-seed-20260803-v1.tar.gz",
+      "purpose": "All seven fixed-epoch data sizes (50 to 4000), seed 20260803",
+      "priority": "optional-for-scaling",
+      "bytes": 597531556,
+      "sha256": "89cf6e7cef4c9256ddd843425c62eec0a6a491371f80a235654ccb6262e9d491",
+      "url": null,
+      "file_count": 11
+    },
+    {
+      "filename": "fold2reason-scaling-seed-20260804-v1.tar.gz",
+      "purpose": "All seven fixed-epoch data sizes (50 to 4000), seed 20260804",
+      "priority": "optional-for-scaling",
+      "bytes": 597388240,
+      "sha256": "96f88c63a5d11cc6748caf2c4950b3d2ee21a60bf76ede10760b69fee7bf71c9",
+      "url": null,
+      "file_count": 11
+    },
+    {
+      "filename": "fold2reason-frozen-decoder-heads-v1.tar.gz",
+      "purpose": "Original frozen coordinate and distogram heads; no language adapter or tokenizer",
+      "priority": "required-for-full-method-and-structural-readout",
+      "bytes": 12286998,
+      "sha256": "fdfc47dede72a1cf336e782d98f74e1a1399b11cc575d76c08fbbb7b9df8c403",
+      "url": null,
+      "file_count": 6
+    },
+    {
+      "filename": "fold2reason-qwen35-9b-main-lora-workspace-3seeds-v1.tar.gz",
+      "purpose": "Qwen3.5-9B main experiment: matched LoRA/workspace, three seeds, epoch 3 / step 375",
+      "priority": "optional-skip-main-training",
+      "bytes": 526114827,
+      "sha256": "c9ebafb3324378fd9e5a5204ac2c7012d21f2c3b734ec829f06fd9c8b823cdbb",
+      "url": null,
+      "file_count": 15,
+      "seeds": [
+        20260729,
+        20260803,
+        20260804
+      ],
+      "epoch": 3,
+      "step": 375,
+      "model": "Qwen/Qwen3.5-9B"
+    }
+  ],
+  "distribution_scope": "data-decoder-and-qwen35-9b-main-weights"
+}

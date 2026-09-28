@@ -1,0 +1,8 @@
+{
+  "model": "example-model",
+  "seed": 20260729,
+  "benchmark": "ftb_core",
+  "base": 0.5,
+  "adapted": 0.52
+}
+

@@ -1,0 +1,16 @@
+description = "FoldingCorpus-only Pure LoRA, with no workspace or geometry loss"
+
+[arguments]
+epochs = 3
+seed = 20260729
+gradient_accumulation = 2
+lora_learning_rate = 0.0001
+weight_decay = 0.01
+warmup_ratio = 0.05
+max_grad_norm = 1.0
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05
+corpus_variant = "real"
+checkpoint_every = 50
+
