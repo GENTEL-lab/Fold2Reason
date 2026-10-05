@@ -379,4 +379,20 @@ The public name is **FoldingCorpus**. Legacy tensor keys, checkpoint fields, and
 
 ## Attribution
 
-The implementation was reorganized from the research codebase. [Provenance](docs/provenance.json) records the source-to-package mapping and source hashes. Dependencies retain their own licenses; see [third-party resources](THIRD_PARTY_NOTICES.md). Citation metadata can be added when the paper's public title, author list, and identifier are finalized.
+The implementation was reorganized from the research codebase. [Provenance](docs/provenance.json) records the source-to-package mapping and source hashes. Dependencies retain their own licenses; see [third-party resources](THIRD_PARTY_NOTICES.md).
+
+## Citation
+
+If you use Fold2Reason or FoldingCorpus, please cite the [paper](https://arxiv.org/abs/2609.38879):
+
+```bibtex
+@misc{liu2026doeslearningproteinfolding,
+  title={Does Learning Protein Folding Generalize to Broader Reasoning?},
+  author={Yong Liu and Zhanpeng Shi and Yizhou Dang and Zhongyue Zhang and Xiaoliang Shi and Zhijian Wei and Shuangjia Zheng},
+  year={2026},
+  eprint={2609.38879},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2609.38879},
+}
+```
