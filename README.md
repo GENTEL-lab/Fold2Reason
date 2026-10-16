@@ -1,6 +1,10 @@
 # Fold2Reason
 
-[📄 Paper](https://arxiv.org/abs/2609.38879) · [🤗 Model checkpoints](https://huggingface.co/GENTEL-Lab/Fold2Reason-Qwen3.5-9B) · [🤗 FoldingCorpus](https://huggingface.co/datasets/GENTEL-Lab/FoldingCorpus)
+<p align="center">
+  <a href="https://arxiv.org/abs/2609.38879">📄 Paper</a> ·
+  <a href="https://huggingface.co/GENTEL-Lab/Fold2Reason-Qwen3.5-9B">🤗 Model checkpoints</a> ·
+  <a href="https://huggingface.co/datasets/GENTEL-Lab/FoldingCorpus">🤗 FoldingCorpus</a>
+</p>
 
 [![Fold2Reason diagram showing FoldingCorpus construction, general reasoning transfer, and the model architecture](assets/Fold2Reason.png)](assets/Fold2Reason.pdf)
 
