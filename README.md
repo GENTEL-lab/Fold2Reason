@@ -2,6 +2,8 @@
 
 [![Fold2Reason diagram showing FoldingCorpus construction, general reasoning transfer, and the model architecture](assets/Fold2Reason.png)](assets/Fold2Reason.pdf)
 
+[📄 Paper](https://arxiv.org/abs/2609.38879) · [🤗 Model checkpoints](https://huggingface.co/GENTEL-Lab/Fold2Reason-Qwen3.5-9B) · [🤗 FoldingCorpus](https://huggingface.co/datasets/GENTEL-Lab/FoldingCorpus) · [🤗 FTB-Core v1](https://huggingface.co/datasets/GENTEL-Lab/FTB-Core-v1) · [🤗 FoldBench334](https://huggingface.co/datasets/GENTEL-Lab/FoldBench334)
+
 Protein-structure post-training for language models. **Fold2Reason** combines **FoldingCorpus** supervision with a shared spatial workspace and a frozen geometry decoder. General reasoning is evaluated with the adapted language model; structural readout uses the workspace and decoder.
 
 This repository contains the Qwen3.5 training and evaluation pipeline, a FoldingCorpus-only Pure-LoRA baseline, deterministic data preparation, and General-10 score aggregation.
@@ -10,7 +12,18 @@ This repository contains the Qwen3.5 training and evaluation pipeline, a Folding
 
 The figure shows LM-Folding performance and per-benchmark gains over the base model.
 
-Start here: [install](#install) → [connect `dataset.zip`](#project-bundle-datasetzip) → [download the base model and external benchmarks](#models-and-evaluation-data) → [evaluate released checkpoints](#evaluate-the-released-checkpoints-no-training) or [retrain](#train).
+Start here: [browse the released resources](#hugging-face-releases) → [install](#install) → [connect `dataset.zip`](#project-bundle-datasetzip) → [download the base model and external benchmarks](#models-and-evaluation-data) → [evaluate released checkpoints](#evaluate-the-released-checkpoints-no-training) or [retrain](#train).
+
+## Hugging Face releases
+
+| Resource | Contents |
+| --- | --- |
+| [Fold2Reason Qwen3.5-9B model checkpoints](https://huggingface.co/GENTEL-Lab/Fold2Reason-Qwen3.5-9B) | LoRA adapter and matching workspace for each of three seeds, plus the shared frozen geometry decoder. Use with the [Qwen3.5-9B base model](https://huggingface.co/Qwen/Qwen3.5-9B). |
+| [FoldingCorpus](https://huggingface.co/datasets/GENTEL-Lab/FoldingCorpus) | Protein-derived question-answer splits and a separate `protein_training` configuration. |
+| [FTB-Core v1](https://huggingface.co/datasets/GENTEL-Lab/FTB-Core-v1) | Spatial reasoning benchmark with train, validation, test, and out-of-distribution test splits. |
+| [FoldBench334](https://huggingface.co/datasets/GENTEL-Lab/FoldBench334) | Processed 334-protein structural evaluation snapshot used in the paper. |
+
+The commands below use the combined `dataset.zip` layout; the Hub repositories also provide the model and datasets as individual releases.
 
 ## Install
 
